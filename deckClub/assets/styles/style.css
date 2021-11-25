@@ -1,0 +1,309 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #292e2e;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3.4rem;
+  font-weight: 500;
+  letter-spacing: -2px;
+  text-align: center;
+  margin: 10px;
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  letter-spacing: -2px;
+  text-align: left;
+  margin: 10px 0 10px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 10px 0 10px;
+}
+
+span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #50be9a;
+  font-weight: 800;
+}
+
+p,
+.job {
+  font-size: 0.9rem;
+  color: #5e6b6e;
+  line-height: 26px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.btn-01 {
+  width: 100px;
+  height: 35px;
+  border: 2px solid #50be9a;
+  border-radius: 50px;
+  color: #50be9a;
+  background: transparent;
+  transition: 0.3s;
+}
+
+.btn-01:hover {
+  color: white;
+  background: #50be9a;
+}
+
+.btn-02 {
+  width: 180px;
+  height: 42px;
+  border: 2px solid #50be9a;
+  border-radius: 50px;
+  color: white;
+  background: #50be9a;
+  transition: 0.3s;
+}
+
+.btn-02:hover {
+  color: #50be9a;
+  background: transparent;
+}
+
+.btn-03 {
+  width: 180px;
+  height: 22px;
+  margin: 10px 0 10px 0;
+  border: 2px solid white;
+  color: #292e2e;
+  background: white;
+  transition: 0.3s;
+  box-shadow: 0px 1px 2px #0000008a;
+}
+
+/************* HEADER ****************/
+
+header {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  width: 100%;
+  height: 60px;
+}
+
+nav,
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 5px 10px;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-btn {
+  margin: auto;
+}
+
+/******************* SECTION 01 *****************/
+#section-01 {
+  display: grid;
+  grid-template-rows: 40% 60%;
+  width: 100%;
+  height: calc(100vh - 60px);
+}
+
+.centered-container {
+  max-width: 500px;
+  margin: auto;
+}
+
+.centered-container > a {
+  margin: 20px auto;
+}
+
+.centered-container > a > i {
+  margin-right: 10px;
+}
+
+#banner-img {
+  background: url(../img/bg.jpg) center/cover;
+}
+
+/**************** SECTION 02 **************/
+#section-02 {
+  width: 100%;
+  height: 800px;
+  margin: 80px 0 0 0;
+}
+
+.lefted-container {
+  margin-left: 10%;
+}
+
+.lefted-container > #title {
+  max-width: 500px;
+  position: relative;
+}
+
+#posts-container {
+  margin: 40px 0 40px 0;
+  display: flex;
+  width: 10000px;
+  height: 600px;
+  position: absolute;
+}
+
+.posts {
+  width: 550px;
+  height: 550px;
+  margin: 20px;
+  display: grid;
+  grid-template-rows: 75% 25%;
+}
+
+.post-content {
+  margin: auto 0 auto 0;
+}
+
+.post-content > a > i {
+  margin-left: 5px;
+}
+
+#post1-img {
+  background: url(../img/img-01.jpg) center/cover;
+}
+
+#post2-img {
+  background: url(../img/img-02.jpg) center/cover;
+}
+
+/**************** SECTION 03 **************/
+.ratings {
+  width: 550px;
+  min-height: 300px;
+  margin: 80px 20px 20px 20px;
+  display: grid;
+  grid-template-rows: 15% 65% 10% 10%;
+}
+
+.stars {
+  color: #f0b54a;
+}
+
+.stars ul {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.ratings > p {
+  color: #292e2e;
+  font-size: 1.1rem;
+  line-height: 32px;
+  display: block;
+}
+
+.ratings > p::before,
+.ratings > p::after {
+  content: '"';
+}
+
+.com-author {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/******************* SECTION 04*******************/
+
+/******************* FOOTER*******************/
+footer {
+  height: 800px;
+  background: #00262e;
+  margin-top: 120px;
+  display: block;
+}
+
+#booktour-grid {
+  padding: 100px 10% 100px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  position: relative;
+}
+
+#booktour-grid::after {
+  content: "";
+  margin-top: 80px;
+  height: 1px;
+  width: 200%;
+  background: #2e4e54;
+}
+
+#booktour-grid > h2 {
+  color: #cfe2da;
+  max-width: 280px;
+}
+
+#booktour-grid > a {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+#links-container {
+  color: #bec7c9;
+  padding: 0px 10% 100px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+#links-container > ul {
+  margin: 10%;
+}
+
+#links-container > ul > li {
+  margin-top: 10px;
+}
+
+.links-category {
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+#legal-social {
+  padding: 20px 10% 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  color: #bec7c9;
+}
+
+#legal-social > ul {
+  display: flex;
+  margin-left: auto;
+  margin-right: 0;
+  text-transform: uppercase;
+}
+
+#legal-social > ul > li {
+  margin: 0 5px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
