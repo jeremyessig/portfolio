@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="timeline.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/index.js" defer></script>
+    <script src="./js/timeline.js" defer></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a class="navbar-brand" href="#">Jérémy Essig</a>
+                <ul class="navbar-ul">
+                    <li class="nav-item">
+                    <a class="nav-link active hover-underline-animation" aria-current="page" href="#">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link hover-underline-animation" href="#">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover-underline-animation" href="#">Formations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover-underline-animation" href="#">Expériences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover-underline-animation" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+          </nav>
+    </header>
+
+
+    <main class="wrapper">
+        <section data-parallax="0.1" class="section parallax">
+            <div class="container welcom center">
+                <div>
+                    <img src="" alt="" id="profil-picture">
+                </div>
+                <div>
+                    <h2>Bonjour, je suis Jérémy !</h2> 
+                    <p>Je suis actuellement en réorientation professionnelle dans le développement informatique chez OpenClassRoom et je souaite mettre mes compétences de développeur web au profit de votre entreprise durant une alternance de 12 mois.</p>
+                    <p>Pour moi la programmation est une véritable passion. J'aime considérer le code comme un poème et l'interface comme un tableau, car tout deux doivent être beau à voir.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section static profil is-slanted--top-left">
+            <div class="container">
+                <h1>Mon profil</h1>
+            </div>
+            <div class="container center">
+                <div class="grid-2">
+                    <div class="feature-box">
+                        <div class="feature-box-1">
+                            <span class="green"><i class="fas fa-code icon-custom-style"></i></span>
+                        </div>
+                        <div class="feature-box-2">
+                            <h3>J'aime l'informatique</h3>
+                            <p>Je suis passioné par l'informatique depuis que j'ai installé ma première Ubuntu à l'âge de 15 ans. Depuis, je ne cesse de coder et me passionne pour la programmation. </p>
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-box-1">
+                            <span class="blue"><i class="far fa-window-restore icon-custom-style"></i></span>
+                        </div>
+                        <div class="feature-box-2">
+                            <h3>J'aime crée des interfaces utilisateurs conviviales</h3>
+                            <p>Pour moi l'UX est très importante dans la conception d'un programme. L'interface doit être ergonomique et simple pour impliquer rapidement l'utilisateur.</p>
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-box-1">
+                            <span class="orange"><i class="fas fa-check-square icon-custom-style"></i></span>
+                        </div>
+                        <div class="feature-box-2">
+                            <h3>J'aime apprendre et relever les défis</h3>
+                            <p>L'informatique est un domaine merveilleux pour apprendre sans cesse de nouvelles choses et réussir de nouveaux défis. C'est un domaine innovent et stimulant intellectuellement.</p>
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-box-1">
+                            <span class="yellow"><i class="fas fa-users icon-custom-style"></i></span>
+                        </div>
+                        <div class="feature-box-2">
+                            <h3>J'aime travailler avec des équipes motivées</h3>
+                            <p>C'est bien connu, l'union fait la force ! C'est pourquoi j'aime travaille en équipe pour apprendre des autres et progresser plus rapidement.</p>
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-box-1">
+                            <span class="purple"><i class="fas fa-graduation-cap icon-custom-style"></i></span>
+                        </div>
+                        <div class="feature-box-2">
+                            <h3>Je suis autonome</h3>
+                            <p>Toutes mes connaissances en informatique on été acquises en autotodidacte sur mon temps libre. Je n'ai aucune difficulté à travailler seul et trouver les ressources nécessaires pour terminer mes missions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-parallax="0.1" class="section parallax competences">
+            <div class="container center">
+                <h1>Mes compétences</h1>
+            </div>
+            <div class="container grid-2">
+                <div class="card transparent-card">
+                    <div class="card-header">Logiciels</div>
+                    <div class="card-body">
+                        <ul class="leaders">
+                            <li>
+                                <span>Visual Studio Code</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>Ubuntu Linux</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>Suite LibreOffice</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>Suite Google Docs</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>Scribus</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>TheGimp</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>Krita</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>InkScape</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>Kdenlive</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card transparent-card">
+                    <div class="card-header">Connaissances théoriques</div>
+                    <div class="card-body">
+                        <ul class="leaders">
+                            <li>
+                                <span>Programmation fonctionnelle</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>Programmation orientée objet</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>Programmation orientée prototype</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>User Experience (UX)</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>MVC</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card transparent-card">
+                    <div class="card-header">Programmation</div>
+                    <div class="card-body">
+                        <ul class="leaders">
+                            <li>
+                                <span>Python</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>GDScript</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>Java</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card transparent-card">
+                    <div class="card-header">Web</div>
+                    <div class="card-body">
+                        <ul class="leaders">
+                            <li>
+                                <span>HTML5</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>CSS3</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>XML</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>JavaScript</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>PHP</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>MySQL</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container center">
+                <div class="competences-caption">
+                    <span>Débutant</span>
+                    <span class="rating">
+                    <i class="fa fa-circle"></i>
+                    <i class="far fa-circle"></i>
+                    <i class="far fa-circle"></i>
+                    </span>
+                    <p>Je connais les bases du fonctionnement mais je n'ai jamais réalisé de projet.</p>
+                </div>
+                <div class="competences-caption">
+                    <span>Connaissances</span>
+                    <span class="rating">
+                    <i class="fa fa-circle"></i>
+                    <i class="fa fa-circle"></i>
+                    <i class="far fa-circle"></i>
+                    </span>
+                    <p>Je connais le foctionnement et j'ai déjà réalisé un ou deux projets.</p>
+                </div>
+                <div class="competences-caption">
+                    <span>Maîtrisé</span>
+                    <span class="rating">
+                    <i class="fa fa-circle"></i>
+                    <i class="fa fa-circle"></i>
+                    <i class="fa fa-circle"></i>
+                    </span>
+                    <p>Je connais bien le fonctionnement et j'ai réalisé plusieurs projets.</p>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section class="section static formations is-slanted--top-left">
+            <div class="container">
+                <h1>Mes formations</h1>
+            </div>
+            <div class="container center">
+                  
+                  <section class="timeline">
+                    <ul>
+                      <li>
+                        <div>
+                          <time>2007 - 2011</time> <p>Gymnase intercantonal de la Broye (Suisse)</p> section Certificat de Culture Générale Socio-pédagogique.
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <time>2012 - 2017</time> <p>Ecole Normale Supérieure de Musique de Paris.</p> Piano 4ème division professionnelle, Solfège 2ème division et Analyse.                          
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <time>2017 - 2020</time> <p>Paris IV Sorbonne Université.</p> Bilicence d’histoire géographie obtenue avec mention “Bien”.
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <time>2020 - 2021</time> <p><strong>INSPE de Paris.</strong></p> Master MEEF second degré 1ère année (Sorbonne Université). Admissible au CAPES session 2021
+                          
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <time>2022</time> <p><strong>Formation OpenClassRoom</strong></p> Recherche d'une alternance de 12 mois pour commencer la formation.
+                          
+                        </div>
+                      </li>
+                    </ul>
+                  </section>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>

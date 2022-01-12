@@ -1,0 +1,269 @@
+html {
+  /* overflow: hidden; */
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(238, 238, 238);
+  font-family: raleway, helvetica neue, helvetica, sans-serif;
+  line-height: 1.5em;
+  font-weight: 300;
+  text-align: justify;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* body::after {
+  content: "";
+  height: 2px;
+  position: fixed;
+  top: calc(50% - 1px);
+  left: 0;
+  right: 0;
+  background-color: red;
+  z-index: 10;
+} */
+
+h3 {
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #5e2750;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #5e2750;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar {
+  display: block;
+  background-color: white;
+  /* background: rgb(233, 84, 32);
+  background: linear-gradient(
+    90deg,
+    rgba(233, 84, 32, 1) 0%,
+    rgba(94, 39, 80, 1) 100%
+  ); */
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  z-index: 10;
+  border-bottom: 1px solid rgb(230, 230, 230);
+  /* border-bottom: 1px solid rgb(66, 25, 56); */
+}
+
+.navbar-container {
+  display: flex;
+  margin: 5px auto;
+  justify-content: flex-end;
+  max-width: 1140px;
+  padding: 0 10px;
+}
+
+.navbar-ul {
+  display: flex;
+  padding: 0;
+}
+
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #5e2750;
+  margin-right: auto;
+  font-size: 1.6rem;
+}
+
+.nav-item {
+  margin: 0 10px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #777;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #333;
+}
+
+/* Corps de page */
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 1140px;
+  padding: 10px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.static {
+  background-color: white;
+}
+
+.is-slanted--top-left {
+  /* -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% calc(0% + 4rem)); */
+  clip-path: polygon(100% 0, 100% calc(100% - 3rem), 0 100%, 0 calc(0% + 3rem));
+  margin: -6rem 0;
+  padding: 12rem 0;
+}
+
+.parallax {
+  min-height: 400px;
+  background: url("./assets/code.jpg") rgba(0, 0, 0, 0.795) center/cover;
+  background-blend-mode: overlay;
+  position: relative;
+  z-index: -10;
+  color: white;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+}
+
+.welcom {
+  font-size: 1.5rem;
+  height: 600px;
+}
+
+.welcom p {
+  text-align: justify;
+}
+
+.feature-box {
+  display: flex;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.feature-box-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-box-1 span {
+  color: #fff;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  border: 0;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 15px;
+}
+
+.feature-box-1 .icon-custom-style {
+  font-size: 23px;
+  line-height: 55px;
+}
+
+.green {
+  background-color: rgb(46, 165, 35);
+}
+
+.blue {
+  background-color: rgb(44, 156, 221);
+}
+
+.yellow {
+  background-color: rgb(255, 220, 61);
+}
+
+.orange {
+  background-color: rgb(255, 122, 61);
+}
+
+.purple {
+  background-color: rgb(161, 61, 255);
+}
+
+/************ Section Competences *****************/
+.competences {
+  height: 1200px;
+  padding-top: 200px;
+}
+
+.card {
+  width: 100%;
+  padding: 10px;
+}
+
+div.card-body > ul > li {
+  list-style-type: none;
+}
+
+ul.leaders li {
+  clear: both;
+}
+
+ul.leaders li:after {
+  content: "";
+  display: block;
+  overflow: hidden;
+  height: 0.85em;
+  border-bottom: 2px dotted;
+  opacity: 0.4;
+}
+
+ul.leaders span:first-child {
+  float: left;
+  padding-right: 0.33em;
+}
+
+ul.leaders span + span {
+  float: right;
+  padding-left: 0.33em;
+  font-size: 70%;
+}
+
+.competences-caption {
+  padding: 50px;
+}
+
+/************ Section Formations *****************/
+.formations {
+  background-color: rgb(247, 247, 247);
+}
