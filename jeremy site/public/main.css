@@ -1,6 +1,8 @@
 html {
-  /* overflow: hidden; */
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
+
 *,
 *:before,
 *:after {
@@ -136,7 +138,7 @@ div.card-body > ul > li {
 
 .navbar-container {
   display: flex;
-  margin: 5px auto;
+  margin: 3px auto;
   justify-content: flex-end;
   max-width: 1140px;
   padding: 0 10px;
@@ -174,7 +176,25 @@ div.card-body > ul > li {
   color: #333;
 }
 
+#progressBar {
+  --scrollAmount: 0%;
+  background: rgb(233, 84, 32);
+  background: linear-gradient(
+    90deg,
+    rgba(233, 84, 32, 1) 0%,
+    rgba(94, 39, 80, 1) 100%
+  );
+  width: var(--scrollAmount);
+  height: 2px;
+}
+
 /* Corps de page */
+
+.wrapper {
+  /* scroll-behavior: smooth; */
+}
+
+/*********************/
 
 .static {
   background-color: white;
@@ -203,6 +223,7 @@ div.card-body > ul > li {
 
 .welcome p {
   text-align: justify;
+  line-height: 2.1rem;
 }
 
 .welcome-title h2 {
@@ -460,6 +481,10 @@ footer {
 .contact-icon {
   margin: 10px;
   font-size: 1.5rem;
+}
+
+#legal {
+  font-size: 0.8rem;
 }
 
 /* RESPONSIVE

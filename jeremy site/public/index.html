@@ -14,6 +14,7 @@
     <script src="./js/timeline.js" defer></script>
     <script src="./js/letters.js" defer></script>
     <script src="./js/gallery.js" defer></script>
+    <script src="./js/scrollbar.js" defer></script>
 
     <title>Document</title>
 </head>
@@ -25,28 +26,29 @@
                 <a class="navbar-brand" href="#">Jérémy Essig</a>
                 <ul class="navbar-ul">
                     <li class="nav-item">
-                    <a class="nav-link active hover-underline-animation" aria-current="page" href="#">Profil</a>
+                    <a class="nav-link active hover-underline-animation" aria-current="page" href="#profil">Profil</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link hover-underline-animation" href="#">Compétences</a>
+                    <a class="nav-link hover-underline-animation" href="#competences">Compétences</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="#">Formations</a>
+                        <a class="nav-link hover-underline-animation" href="#formations">Formations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="#">Expériences</a>
+                        <a class="nav-link hover-underline-animation" href="#experiences">Expériences</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hover-underline-animation" href="#">Contact</a>
+                        <a class="nav-link hover-underline-animation" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
+            <div id="progressBar"></div>
           </nav>
     </header>
 
 
     <main class="wrapper">
-        <section data-parallax="0.15" class="section parallax">
+        <section data-parallax="0.1" class="section parallax">
             <div class="container welcome center">
                 <div>
                     <img src="" alt="" id="profil-picture">
@@ -58,13 +60,13 @@
                         </div>
                     <h2 >Je m'appelle Jérémy Essig</h2> 
                 </div>
-                    <p>Je suis actuellement en réorientation professionnelle dans le développement informatique chez OpenClassRoom et je souaite mettre mes compétences de développeur web au profit de votre entreprise durant une alternance de 12 mois.</p>
-                    <p>Pour moi la programmation est une véritable passion. J'aime considérer le code comme un poème et l'interface comme un tableau, car tout deux doivent être beau à voir.</p>
+                    <p>Je suis actuellement en réorientation professionnelle dans le développement informatique chez OpenClassRoom et je souhaite mettre mes compétences de développeur web au profit de votre entreprise durant une alternance de 12 mois.</p>
+                    <p>Pour moi la programmation est une véritable passion. J'aime considérer le code comme un poème et l'interface comme un tableau, car tous deux doivent être beau à voir.</p>
                 </div>
             </div>
         </section>
 
-        <section class="section static profil is-slanted--top-left">
+        <section class="section static profil is-slanted--top-left" id="profil">
             <div class="container">
                 <h1>Mon profil</h1>
             </div>
@@ -84,7 +86,7 @@
                             <span class="blue"><i class="far fa-window-restore icon-custom-style"></i></span>
                         </div>
                         <div class="feature-box-2">
-                            <h3>J'aime crée des interfaces utilisateurs conviviales</h3>
+                            <h3>J'aime créer des interfaces utilisateurs conviviales</h3>
                             <p>Pour moi l'UX est très importante dans la conception d'un programme. L'interface doit être ergonomique et simple pour impliquer rapidement l'utilisateur.</p>
                         </div>
                     </div>
@@ -121,19 +123,19 @@
                         </div>
                         <div class="feature-box-2">
                             <h3>Je peux travailler à distance</h3>
-                            <p>Mon ancien métier de pianiste m'appris à travailler de manière efficace même depuis chez moi. De plus, ma connexion internet me permet de travailler à distance.</p>
+                            <p>Mon ancien métier de pianiste m'a appris à travailler de manière efficace même depuis chez moi. De plus, ma connexion internet me permet de travailler à distance si nécessaire.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section data-parallax="0.15" class="section parallax competences">
+        <section data-parallax="0.1" class="section parallax competences" id="competences">
             <div class="container center">
                 <h1>Mes compétences</h1>
             </div>
             <div class="container grid-2">
                 <div class="card transparent-card">
-                    <div class="card-header">Logiciels</div>
+                    <div class="card-header"><i class="fab fa-app-store-ios contact-icon"></i>Logiciels</div>
                     <div class="card-body">
                         <ul class="leaders">
                             <li>
@@ -220,7 +222,7 @@
                     </div>
                 </div>
                 <div class="card transparent-card">
-                    <div class="card-header">Connaissances théoriques</div>
+                    <div class="card-header"><i class="fas fa-brain contact-icon"></i>Connaissances théoriques</div>
                     <div class="card-body">
                         <ul class="leaders">
                             <li>
@@ -263,11 +265,19 @@
                                 <i class="far fa-circle"></i>
                                 </span>
                             </li>
+                            <li>
+                                <span>SEO</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                </span>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="card transparent-card">
-                    <div class="card-header">Programmation</div>
+                    <div class="card-header"><i class="fas fa-code contact-icon"></i>Programmation</div>
                     <div class="card-body">
                         <ul class="leaders">
                             <li>
@@ -298,7 +308,7 @@
                     </div>
                 </div>
                 <div class="card transparent-card">
-                    <div class="card-header">Web</div>
+                    <div class="card-header"><i class="fas fa-cloud contact-icon"></i>Web</div>
                     <div class="card-body">
                         <ul class="leaders">
                             <li>
@@ -392,7 +402,7 @@
             </div>
         </div>
         </section>
-        <section class="section static formations is-slanted--top-left">
+        <section class="section static formations is-slanted--top-left" id="formations">
             <div class="container">
                 <h1>Mes formations</h1>
             </div>
@@ -431,7 +441,7 @@
                   </section>
             </div>
         </section>
-        <section class="section static experience">
+        <section class="section static experience" id="experiences">
             <div class="center"><h1>Mes expériences et projets personnels</h1></div>
             <div class="container center">
                 <div class="gallery-container">
@@ -464,10 +474,6 @@
                         <img src="./assets/gallery/inari02.jpg" alt="Site web portfolio" style="width:100%">
                     </div>
                     <div class="mySlides">
-                        <div class="numbertext">7 / 8</div>
-                        <img src="./assets/gallery/inari03.jpg" alt="Site web portfolio" style="width:100%">
-                    </div>
-                    <div class="mySlides">
                         <div class="numbertext">8 / 8</div>
                         <img src="./assets/gallery/inari04.jpg" alt="Site web portfolio" style="width:100%">
                     </div>
@@ -489,19 +495,16 @@
                             <img class="demo cursor" src="./assets/gallery/schedule03.jpg" style="width:100%" onclick="currentSlide(3)" alt="Site web portfolio">
                         </div>
                         <div class="column">
-                            <img class="demo cursor" src="./assets/gallery/schedule04.jpg" style="width:100%" onclick="currentSlide(3)" alt="Site web portfolio">
+                            <img class="demo cursor" src="./assets/gallery/schedule04.jpg" style="width:100%" onclick="currentSlide(4)" alt="Site web portfolio">
                         </div>
                         <div class="column">
-                            <img class="demo cursor" src="./assets/gallery/inari01.jpg" style="width:100%" onclick="currentSlide(1)" alt="Site web portfolio">
+                            <img class="demo cursor" src="./assets/gallery/inari01.jpg" style="width:100%" onclick="currentSlide(5)" alt="Site web portfolio">
                         </div>
                         <div class="column">
-                            <img class="demo cursor" src="./assets/gallery/inari02.jpg" style="width:100%" onclick="currentSlide(2)" alt="Site web portfolio">
+                            <img class="demo cursor" src="./assets/gallery/inari02.jpg" style="width:100%" onclick="currentSlide(6)" alt="Site web portfolio">
                         </div>
                         <div class="column">
-                            <img class="demo cursor" src="./assets/gallery/inari03.jpg" style="width:100%" onclick="currentSlide(3)" alt="Site web portfolio">
-                        </div>
-                        <div class="column">
-                            <img class="demo cursor" src="./assets/gallery/inari04.jpg" style="width:100%" onclick="currentSlide(3)" alt="Site web portfolio">
+                            <img class="demo cursor" src="./assets/gallery/inari04.jpg" style="width:100%" onclick="currentSlide(7)" alt="Site web portfolio">
                         </div>
                     </div>
                 </div>
@@ -511,9 +514,9 @@
                     <div class="card card-border">
                         <div class="card-header">Site web personnel/Portfolio</div>
                         <card class="body">
-                            <p>J'ai réalisé le site que vous êtes actuellement en train de visiter. Je peux réaliser ce type de site dès aujourd'hui pour votre entreprise</p>
-                            <p>Ce site a été entièrement réalisé en HTML5 CSS3 et JavaScript. Je me suis inspiré de différents site pour son design. Après avoir conçu la maquette et défini les couleurs principales, j'ai codé le site
-                                avec Visual Studio Code. J'ai utilisé également quelques plugins JS notamment pour la timeline que j'ai intégré et personnalisé. 
+                            <p>J'ai réalisé le site que vous êtes actuellement en train de visiter. Je peux réaliser ce type de site dès aujourd'hui pour votre entreprise.</p>
+                            <p>Ce site a été entièrement réalisé en HTML5 CSS3 et JavaScript. Je me suis inspiré de différents sites pour son design. Après avoir conçu la maquette et défini les couleurs principales, j'ai codé le site
+                                avec Visual Studio Code. J'ai utilisé également quelques plugins JS notamment pour la timeline que j'ai intégrés et personnalisés. 
                             </p>
                         </card>
                     </div>
@@ -540,7 +543,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer id="contact">
         <div class="container white-text"><h1>Liens et contact</h1></div>
         <div class="container center white-text">
             <div class="grid-2">
@@ -549,13 +552,13 @@
                     <div class="card-body"> 
                         <ul>
                             <li>
-                                <a href="mailto:jeremy.essig.pro@gmail.com"><i class="fas fa-envelope-open-text contact-icon"></i>Email</a>
+                                <a href="mailto:jeremy.essig.pro@gmail.com" class="hover-underline-animation"><i class="fas fa-envelope-open-text contact-icon"></i>Email</a>
                             </li>
                             <li>
-                                <a href="https://www.linkedin.com/in/jeremyessig/" target="_blank"><i class="fab fa-linkedin contact-icon"></i>LinkedIn</a>
+                                <a href="https://www.linkedin.com/in/jeremyessig/" target="_blank" class="hover-underline-animation"><i class="fab fa-linkedin contact-icon"></i>LinkedIn</a>
                             </li>
                             <li>
-                                <a href="" target="_blank"><i class="fas fa-cloud-download-alt contact-icon"></i>CV</a>
+                                <a href="" target="_blank" class="hover-underline-animation"><i class="fas fa-cloud-download-alt contact-icon"></i>CV</a>
                             </li>
                         </ul>
                     </div>
@@ -565,20 +568,20 @@
                     <div class="card-body"> 
                         <ul>
                             <li>
-                                <a href="https://github.com/jeremyessig" target="_blank"><i class="fab fa-github contact-icon"></i>GitHub</a>
+                                <a href="https://github.com/jeremyessig" target="_blank" class="hover-underline-animation"><i class="fab fa-github contact-icon"></i>GitHub</a>
                             </li>
                             <li>
-                                <a href="https://sites.google.com/view/schedulemanager/accueil" target="_blank"><i class="fas fa-link contact-icon"></i>Schedule Manager</a>
+                                <a href="https://sites.google.com/view/schedulemanager/accueil" target="_blank" class="hover-underline-animation"><i class="fas fa-link contact-icon"></i>Schedule Manager</a>
                             </li>
                             <li>
-                                <a href="https://inarisensei.blogspot.com/" target="_blank"><i class="fas fa-link contact-icon"></i>Inari Sensei</a>
+                                <a href="https://inarisensei.blogspot.com/" target="_blank" class="hover-underline-animation"><i class="fas fa-link contact-icon"></i>Inari Sensei</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-
+        <div class="center white-text" id="legal">Copyright Jérémy Essig 2022</div>
     </footer>
 
 </body>
