@@ -14,24 +14,16 @@ body {
   line-height: 1.5em;
   font-weight: 300;
   text-align: justify;
-
   margin: 0;
   padding: 0;
 }
 
-/* body::after {
-  content: "";
-  height: 2px;
-  position: fixed;
-  top: calc(50% - 1px);
-  left: 0;
-  right: 0;
-  background-color: red;
-  z-index: 10;
-} */
-
 h3 {
   font-size: 1.4rem;
+  text-align: left;
+}
+
+.align-left {
   text-align: left;
 }
 
@@ -44,6 +36,68 @@ ul {
   position: relative;
   color: #5e2750;
 }
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 1140px;
+  padding: 10px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*   Grid */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  row-gap: 2rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 3rem;
+  row-gap: 2rem;
+}
+
+/***** Card *******/
+.card {
+  width: 100%;
+  padding: 15px;
+  background-color: white;
+}
+
+.transparent-card {
+  background-color: transparent;
+}
+
+.white-text {
+  color: white;
+}
+
+.card-border {
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.212);
+}
+
+.card-header {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+div.card-body > ul > li {
+  list-style-type: none;
+}
+
+/*****/
 
 .hover-underline-animation:after {
   content: "";
@@ -122,20 +176,6 @@ ul {
 
 /* Corps de page */
 
-.container {
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  max-width: 1140px;
-  padding: 10px;
-}
-
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .static {
   background-color: white;
 }
@@ -149,6 +189,7 @@ ul {
 
 .parallax {
   min-height: 400px;
+  padding: 200px 0 200px 0;
   background: url("./assets/code.jpg") rgba(0, 0, 0, 0.795) center/cover;
   background-blend-mode: overlay;
   position: relative;
@@ -156,19 +197,60 @@ ul {
   color: white;
 }
 
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 4rem;
+.welcome {
+  font-size: 1.4rem;
 }
 
-.welcom {
-  font-size: 1.5rem;
-  height: 600px;
-}
-
-.welcom p {
+.welcome p {
   text-align: justify;
+}
+
+.welcome-title h2 {
+  font-size: 2rem;
+}
+
+#animated-text {
+  /* position: absolute;
+  width: 500px; */
+  /* border-radius: 10px; */
+  height: 100px;
+  left: calc(50% - 200px);
+  top: calc(50% - 100px);
+  color: white;
+  font-size: 2.4rem;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  backdrop-filter: blur(2px);
+  text-shadow: 1px 1px 2px black;
+  padding: 0;
+}
+
+#animated-text-target {
+  display: flex;
+  position: relative;
+  padding: 0;
+}
+#animated-text-target::after {
+  content: "";
+  /* position: absolute; */
+  height: 6rem;
+  width: 5px;
+  margin-left: 10px;
+  background: white;
+  top: 0;
+  transform: translateY(-4px);
+  right: -5px;
+  animation: anim 0.8s linear infinite;
+  padding: 0;
+}
+@keyframes anim {
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .feature-box {
@@ -222,17 +304,8 @@ ul {
 
 /************ Section Competences *****************/
 .competences {
-  height: 1200px;
-  padding-top: 200px;
-}
-
-.card {
-  width: 100%;
-  padding: 10px;
-}
-
-div.card-body > ul > li {
-  list-style-type: none;
+  /* height: 1200px;
+  padding-top: 200px; */
 }
 
 ul.leaders li {
@@ -260,10 +333,147 @@ ul.leaders span + span {
 }
 
 .competences-caption {
-  padding: 50px;
+  padding: 5px;
 }
 
 /************ Section Formations *****************/
 .formations {
   background-color: rgb(247, 247, 247);
+}
+
+/************ Section Experiences *****************/
+.experience {
+  padding: 150px 0;
+}
+
+/******** Gallery *****************/
+
+/* Position the image container (needed to position the left and right arrows) */
+.gallery-container {
+  position: relative;
+  max-width: 800px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 5px 0 0 5px;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 0 5px 5px 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #212529;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.mySlides > img {
+  border-radius: 5px;
+}
+
+.gallery-row {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  display: grid;
+}
+
+.gallery-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  max-width: 100px;
+}
+
+.column > img {
+  border-radius: 5px;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+footer {
+  width: 100%;
+  min-height: 400px;
+  background-color: rgb(19, 19, 19);
+  border-top: 1px solid black;
+  padding: 40px;
+  font-size: 1.2rem;
+}
+
+.white-text a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-icon {
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+/* RESPONSIVE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Nouvelles règles si la fenêtre fait au plus 1024px de large */
+@media screen and (max-width: 950px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+  }
+  .column {
+    display: none;
+  }
 }

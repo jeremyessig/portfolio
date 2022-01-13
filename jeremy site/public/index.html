@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="./js/index.js" defer></script>
     <script src="./js/timeline.js" defer></script>
+    <script src="./js/letters.js" defer></script>
+    <script src="./js/gallery.js" defer></script>
 
     <title>Document</title>
 </head>
@@ -44,13 +46,18 @@
 
 
     <main class="wrapper">
-        <section data-parallax="0.1" class="section parallax">
-            <div class="container welcom center">
+        <section data-parallax="0.15" class="section parallax">
+            <div class="container welcome center">
                 <div>
                     <img src="" alt="" id="profil-picture">
                 </div>
                 <div>
-                    <h2>Bonjour, je suis Jérémy !</h2> 
+                    <div class="welcome-title">
+                        <div id="animated-text">
+                            <h1 id="animated-text-target"></h1>
+                        </div>
+                    <h2 >Je m'appelle Jérémy Essig</h2> 
+                </div>
                     <p>Je suis actuellement en réorientation professionnelle dans le développement informatique chez OpenClassRoom et je souaite mettre mes compétences de développeur web au profit de votre entreprise durant une alternance de 12 mois.</p>
                     <p>Pour moi la programmation est une véritable passion. J'aime considérer le code comme un poème et l'interface comme un tableau, car tout deux doivent être beau à voir.</p>
                 </div>
@@ -108,10 +115,19 @@
                             <p>Toutes mes connaissances en informatique on été acquises en autotodidacte sur mon temps libre. Je n'ai aucune difficulté à travailler seul et trouver les ressources nécessaires pour terminer mes missions.</p>
                         </div>
                     </div>
+                    <div class="feature-box">
+                        <div class="feature-box-1">
+                            <span class="green"><i class="fas fa-laptop-house icon-custom-style"></i></span>
+                        </div>
+                        <div class="feature-box-2">
+                            <h3>Je peux travailler à distance</h3>
+                            <p>Mon ancien métier de pianiste m'appris à travailler de manière efficace même depuis chez moi. De plus, ma connexion internet me permet de travailler à distance.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section data-parallax="0.1" class="section parallax competences">
+        <section data-parallax="0.15" class="section parallax competences">
             <div class="container center">
                 <h1>Mes compétences</h1>
             </div>
@@ -126,6 +142,14 @@
                                 <i class="fa fa-circle"></i>
                                 <i class="fa fa-circle"></i>
                                 <i class="fa fa-circle"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span>PhpMyAdmin</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="far fa-circle"></i>
                                 </span>
                             </li>
                             <li>
@@ -325,11 +349,19 @@
                                 <i class="far fa-circle"></i>
                                 </span>
                             </li>
+                            <li>
+                                <span>Bootstrap</span>
+                                <span class="rating">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="far fa-circle"></i>
+                                </span>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="container center">
+            <div class="container grid-3 align-left">
                 <div class="competences-caption">
                     <span>Débutant</span>
                     <span class="rating">
@@ -399,9 +431,153 @@
                   </section>
             </div>
         </section>
+        <section class="section static experience">
+            <div class="center"><h1>Mes expériences et projets personnels</h1></div>
+            <div class="container center">
+                <div class="gallery-container">
+
+                    <!-- Full-width images with number text -->
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 8</div>
+                        <img src="./assets/gallery/schedule01.jpg" alt="Site web portfolio" style="width:100%">
+                    </div>
+                
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 8</div>
+                        <img src="./assets/gallery/schedule02.jpg" alt="Site web portfolio" style="width:100%">
+                    </div>
+                
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 8</div>
+                        <img src="./assets/gallery/schedule03.jpg" alt="Site web portfolio" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 8</div>
+                        <img src="./assets/gallery/schedule04.jpg" alt="Site web portfolio" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">5 / 8</div>
+                        <img src="./assets/gallery/inari01.jpg" alt="Site web portfolio" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">6 / 8</div>
+                        <img src="./assets/gallery/inari02.jpg" alt="Site web portfolio" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">7 / 8</div>
+                        <img src="./assets/gallery/inari03.jpg" alt="Site web portfolio" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">8 / 8</div>
+                        <img src="./assets/gallery/inari04.jpg" alt="Site web portfolio" style="width:100%">
+                    </div>
+                
+                
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                    <!-- Thumbnail images -->
+                    <div class="gallery-row">
+                        <div class="column">
+                            <img class="demo cursor" src="./assets/gallery/schedule01.jpg" style="width:100%" onclick="currentSlide(1)" alt="Site web portfolio">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="./assets/gallery/schedule02.jpg" style="width:100%" onclick="currentSlide(2)" alt="Site web portfolio">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="./assets/gallery/schedule03.jpg" style="width:100%" onclick="currentSlide(3)" alt="Site web portfolio">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="./assets/gallery/schedule04.jpg" style="width:100%" onclick="currentSlide(3)" alt="Site web portfolio">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="./assets/gallery/inari01.jpg" style="width:100%" onclick="currentSlide(1)" alt="Site web portfolio">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="./assets/gallery/inari02.jpg" style="width:100%" onclick="currentSlide(2)" alt="Site web portfolio">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="./assets/gallery/inari03.jpg" style="width:100%" onclick="currentSlide(3)" alt="Site web portfolio">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="./assets/gallery/inari04.jpg" style="width:100%" onclick="currentSlide(3)" alt="Site web portfolio">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container center">
+                <div class="grid-2">
+                    <div class="card card-border">
+                        <div class="card-header">Site web personnel/Portfolio</div>
+                        <card class="body">
+                            <p>J'ai réalisé le site que vous êtes actuellement en train de visiter. Je peux réaliser ce type de site dès aujourd'hui pour votre entreprise</p>
+                            <p>Ce site a été entièrement réalisé en HTML5 CSS3 et JavaScript. Je me suis inspiré de différents site pour son design. Après avoir conçu la maquette et défini les couleurs principales, j'ai codé le site
+                                avec Visual Studio Code. J'ai utilisé également quelques plugins JS notamment pour la timeline que j'ai intégré et personnalisé. 
+                            </p>
+                        </card>
+                    </div>
+                    <div class="card card-border">
+                        <div class="card-header">Logiciel Schedule Manager</div>
+                        <card class="body">
+                            <p>J'ai réalisé un logiciel de gestion d'emploi du temps pour les étudiants de la Sorbonne</p>
+                            <p>Le logiciel est conçu en GDScript et permet de créer facilement un emploi du temps. J'ai réalisé l'intégralité du site, de la
+                                concpetion de l'interface  
+                            </p>
+                        </card>
+                    </div>
+                    <div class="card card-border">
+                        <div class="card-header">Site web Inari Sensei</div>
+                        <card class="body">
+                            <p>J'ai créée le site web Inari Sensei et j'ai réalisé le template du site.</p>
+                            <p>A partir de la plateform blogger, j'ai créée en HTM/CSS/JavaScript un template sur mesure pour ce site dessin. J'ai également optimisé le site
+                                au niveau de la SEO permettant d'accueillir plus de 6'000 visiteurs par mois (90% du traffic passe par Google).
+                            </p>
+                        </card>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
+        <div class="container white-text"><h1>Liens et contact</h1></div>
+        <div class="container center white-text">
+            <div class="grid-2">
+                <div class="card transparent-card">
+                    <div class="card-header">Contact</div>
+                    <div class="card-body"> 
+                        <ul>
+                            <li>
+                                <a href="mailto:jeremy.essig.pro@gmail.com"><i class="fas fa-envelope-open-text contact-icon"></i>Email</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/jeremyessig/" target="_blank"><i class="fab fa-linkedin contact-icon"></i>LinkedIn</a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank"><i class="fas fa-cloud-download-alt contact-icon"></i>CV</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card transparent-card">
+                    <div class="card-header">Projets et dépôts</div>
+                    <div class="card-body"> 
+                        <ul>
+                            <li>
+                                <a href="https://github.com/jeremyessig" target="_blank"><i class="fab fa-github contact-icon"></i>GitHub</a>
+                            </li>
+                            <li>
+                                <a href="https://sites.google.com/view/schedulemanager/accueil" target="_blank"><i class="fas fa-link contact-icon"></i>Schedule Manager</a>
+                            </li>
+                            <li>
+                                <a href="https://inarisensei.blogspot.com/" target="_blank"><i class="fas fa-link contact-icon"></i>Inari Sensei</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </footer>
 
