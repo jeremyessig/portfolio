@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="timeline.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/modal.css">
     <script src="./js/index.js" defer></script>
     <script src="./js/timeline.js" defer></script>
     <script src="./js/letters.js" defer></script>
     <script src="./js/gallery.js" defer></script>
     <script src="./js/scrollbar.js" defer></script>
+    <script src="./js/modal.js" defer></script>
 
     <title>Document</title>
 </head>
@@ -105,7 +107,7 @@
                         </div>
                         <div class="feature-box-2">
                             <h3>J'aime travailler avec des équipes motivées</h3>
-                            <p>C'est bien connu, l'union fait la force ! C'est pourquoi j'aime travaille en équipe pour apprendre des autres et progresser plus rapidement.</p>
+                            <p>C'est bien connu, l'union fait la force ! C'est pourquoi j'aime travailler en équipe pour apprendre des autres et progresser plus rapidement.</p>
                         </div>
                     </div>
                     <div class="feature-box">
@@ -449,33 +451,33 @@
                     <!-- Full-width images with number text -->
                     <div class="mySlides">
                         <div class="numbertext">1 / 8</div>
-                        <img src="./assets/gallery/schedule01.jpg" alt="Site web portfolio" style="width:100%">
+                        <img onclick ='showSlide(1);' class="slide" src="./assets/gallery/schedule01.jpg" alt="Site web portfolio" style="width:100%">
                     </div>
                 
                     <div class="mySlides">
                         <div class="numbertext">2 / 8</div>
-                        <img src="./assets/gallery/schedule02.jpg" alt="Site web portfolio" style="width:100%">
+                        <img onclick ='showSlide(2);' class="slide" src="./assets/gallery/schedule02.jpg" alt="Site web portfolio" style="width:100%">
                     </div>
                 
                     <div class="mySlides">
                         <div class="numbertext">3 / 8</div>
-                        <img src="./assets/gallery/schedule03.jpg" alt="Site web portfolio" style="width:100%">
+                        <img onclick ='showSlide(3);' class="slide" src="./assets/gallery/schedule03.jpg" alt="Site web portfolio" style="width:100%">
                     </div>
                     <div class="mySlides">
                         <div class="numbertext">4 / 8</div>
-                        <img src="./assets/gallery/schedule04.jpg" alt="Site web portfolio" style="width:100%">
+                        <img onclick ='showSlide(4);' class="slide" src="./assets/gallery/schedule04.jpg" alt="Site web portfolio" style="width:100%">
                     </div>
                     <div class="mySlides">
                         <div class="numbertext">5 / 8</div>
-                        <img src="./assets/gallery/inari01.jpg" alt="Site web portfolio" style="width:100%">
+                        <img onclick ='showSlide(5);' class="slide" src="./assets/gallery/inari01.jpg" alt="Site web portfolio" style="width:100%">
                     </div>
                     <div class="mySlides">
                         <div class="numbertext">6 / 8</div>
-                        <img src="./assets/gallery/inari02.jpg" alt="Site web portfolio" style="width:100%">
+                        <img onclick ='showSlide(6);' class="slide" src="./assets/gallery/inari02.jpg" alt="Site web portfolio" style="width:100%">
                     </div>
                     <div class="mySlides">
                         <div class="numbertext">8 / 8</div>
-                        <img src="./assets/gallery/inari04.jpg" alt="Site web portfolio" style="width:100%">
+                        <img onclick ='showSlide(7);' class="slide" src="./assets/gallery/inari04.jpg" alt="Site web portfolio" style="width:100%">
                     </div>
                 
                 
@@ -510,7 +512,14 @@
                 </div>
             </div>
             <div class="container center">
-                <div class="grid-2">
+                <div class="project-description project-active" id="project01">
+                    <h3>Logiciel Schedule Manager</h3>
+                    <p>J'ai réalisé un logiciel de gestion d'emploi du temps pour les étudiants de la Sorbonne</p>
+                    <p>Le logiciel est conçu en GDScript et permet de créer facilement un emploi du temps. J'ai réalisé l'intégralité du site, de la
+                        concpetion de l'interface  
+                    </p>
+                </div>
+                <!-- <div class="grid-2">
                     <div class="card card-border">
                         <div class="card-header">Site web personnel/Portfolio</div>
                         <card class="body">
@@ -538,7 +547,7 @@
                             </p>
                         </card>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
     </main>
@@ -583,5 +592,31 @@
         </div>
         <div class="center white-text" id="legal">Copyright Jérémy Essig 2022</div>
     </footer>
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <img src="" alt="" id="modalImg">
+        <div class="programm-description">
+            <p>J'ai réalisé le site que vous êtes actuellement en train de visiter. Je peux réaliser ce type de site dès aujourd'hui pour votre entreprise.</p>
+                            <p>Ce site a été entièrement réalisé en HTML5 CSS3 et JavaScript. Je me suis inspiré de différents sites pour son design. Après avoir conçu la maquette et défini les couleurs principales, j'ai codé le site
+                                avec Visual Studio Code. J'ai utilisé également quelques plugins JS notamment pour la timeline que j'ai intégrés et personnalisés. 
+                            </p>
+        </div>
+        <div class="programm-description">
+            <p>J'ai créée le site web Inari Sensei et j'ai réalisé le template du site.</p>
+            <p>A partir de la plateform blogger, j'ai créée en HTM/CSS/JavaScript un template sur mesure pour ce site dessin. J'ai également optimisé le site
+                au niveau de la SEO permettant d'accueillir plus de 6'000 visiteurs par mois (90% du traffic passe par Google).
+            </p>
+        </div>
+        <img src="" alt="">
+      </div>
+    </div>
+  
+  </div>
 </body>
